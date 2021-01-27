@@ -13541,6 +13541,26 @@ public class fbc_MetadataService {
 			return service;
 		}
 		
+	public fbc_MetadataService.DescribeValueTypeResult describeValueType(String type_x) {
+			fbc_MetadataService.describeValueType_element request_x=new fbc_MetadataService.describeValueType_element();
+			request_x.type_x=type_x;
+			fbc_MetadataService.describeValueTypeResponse_element response_x;
+			Map<String, fbc_MetadataService.describeValueTypeResponse_element> response_map_x=new Map<String, fbc_MetadataService.describeValueTypeResponse_element>();
+			response_map_x.put('response_x', response_x);
+			WebServiceCallout.invoke(
+			  this,
+			  request_x,
+			  response_map_x,
+			  new String[]{endpoint_x,
+			  '',
+			  SOAP_M_URI,
+			  'describeValueType',
+			  SOAP_M_URI,
+			  'describeValueTypeResponse',
+			  'fbc_MetadataService.describeValueTypeResponse_element'}
+			);
+			response_x=response_map_x.get('response_x');
+			return response_x.result;
 		public class MetadataServiceExamplesException extends Exception { }
 	
 		public static void handleSaveResults(fbc_MetadataService.SaveResult saveResult)
